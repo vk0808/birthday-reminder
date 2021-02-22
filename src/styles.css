@@ -11,7 +11,7 @@ Variables
   --clr-primary-3: hsl(162, 61%, 67%);
   --clr-primary-4: hsl(162, 61%, 57%);
   /* primary/main color */
-  --clr-primary-5: hsl(162, 73%, 46%);
+  --clr-primary-5: hsl(205, 80%, 60%);
   /* lighter shades of primary color */
   --clr-primary-6: #1aa179;
   --clr-primary-7: #13795b;
@@ -174,7 +174,7 @@ main {
 .person p {
   margin-bottom: 0;
 }
-.container button {
+.container .clear-btn {
   color: var(--clr-white);
   display: block;
   width: 100%;
@@ -188,4 +188,14 @@ main {
   border-radius: var(--radius);
   outline: 1px solid rgba(242, 138, 178, 0.8);
   cursor: pointer;
+}
+
+.container .btn {
+  margin-top: 1rem;
+  background: transparent;
+  border-color: transparent;
+  color: var(--clr-primary-5);
+  letter-spacing: var(--spacing);
+  cursor: pointer;
+  
 }

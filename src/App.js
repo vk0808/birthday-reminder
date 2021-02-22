@@ -1,10 +1,16 @@
 import "./styles.css";
+import React, { useState} from 'react';
+import data from './data';
+import List from './List';
 
 export default function App() {
+  const [people, setPeople] = useState(data);
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <main>
+      <section className="container">
+        <h3>{people.length} birthdays today</h3>
+        <List people={people} />
+      </section>
+    </main>
   );
 }

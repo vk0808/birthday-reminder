@@ -115,7 +115,7 @@ export default function App() {
   return (
     <main>
       <section className="container">
-        <h3 className="title">birthday remainder</h3>
+        <h3 className="title">birthday reminder</h3>
         {alert.show && (
           <Alert {...alert} removeAlert={showAlert} people={people} />
         )}

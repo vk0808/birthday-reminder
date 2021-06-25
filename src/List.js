@@ -17,6 +17,7 @@ const List = ({ people, removePerson, editPerson }) => {
               <p>{age}</p>
               <Birthday
                 name={name}
+                age={age}
                 day={moment(date).format("D")}
                 month={moment(date).format("M")}
               />

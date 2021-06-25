@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Countdown from "./Countdown";
 
-const Birthday = ({ name, day, month }) => {
+const Birthday = ({ name, age, day, month }) => {
   // useState Hooks
   const [state, setState] = useState({
     seconds: 0,
@@ -79,7 +79,7 @@ const Birthday = ({ name, day, month }) => {
 
   return (
     <div>
-      <Countdown name={name} countdownData={state} />
+      <Countdown name={name} age={age} day={day} month={month} countdownData={state} />
     </div>
   );
 };

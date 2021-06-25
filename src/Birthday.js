@@ -79,7 +79,12 @@ const Birthday = ({ name, age, day, month }) => {
 
   return (
     <div>
-      <Countdown name={name} age={age} day={day} month={month} countdownData={state} />
+      <Countdown
+        name={name}
+        day={day}
+        month={month}
+        countdownData={state}
+      />
     </div>
   );
 };

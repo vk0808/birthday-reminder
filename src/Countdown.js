@@ -1,8 +1,24 @@
 import React from "react";
 
-const Countdown = ({ name, age, day, month, countdownData }) => {
+const Countdown = ({ name, day, month, countdownData }) => {
   const presentDate = new Date();
-  if (presentDate.getDate() !== day && presentDate.getMonth() !== month - 1) {
+  if (
+    presentDate.getDate() === parseInt(day) &&
+    presentDate.getMonth() === parseInt(month) - 1
+  ) {
+    return (
+      <div className="wish">
+        <p>
+          It's time to celebrate <span className="name">{name}</span>' birthday.
+        </p>
+        <p>
+          <strong>
+            Wish <span className="name">{name}</span>
+          </strong>
+        </p>
+      </div>
+    );
+  } else {
     return (
       <div>
         <div className="countdown-wrapper">
@@ -23,19 +39,6 @@ const Countdown = ({ name, age, day, month, countdownData }) => {
             <span className="legend">Sec</span>
           </div>
         </div>
-      </div>
-    );
-  } else {
-    return (
-      <div className="wish">
-        <p>
-          It's time to celebrate <span className="name">{name}</span>' birthday.
-        </p>
-        <p>
-          <strong>
-            Wish <span className="name">{name}</span>
-          </strong>
-        </p>
       </div>
     );
   }

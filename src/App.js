@@ -177,6 +177,7 @@ export default function App() {
               removePerson={removePerson}
               editPerson={editPerson}
               today={today}
+              setAmount={setAmount}
             />
             <button className="clear-btn" onClick={clearList}>
               clear all

@@ -2,14 +2,22 @@ import React from "react";
 import moment from "moment";
 import Birthday from "./Birthday";
 import { FaEdit, FaTrash } from "react-icons/fa";
-import { data } from "./data";
 
-const List = ({ people, removePerson, editPerson, today }) => {
-  let filteredData = people
-  today === true ? filteredData = data : filteredData = people 
+const List = ({ people, removePerson, editPerson, today, setAmount }) => {
+  let filteredData = people.filter((person) => {
+    const presentDate = new Date();
+
+    return (
+      presentDate.getDate() === parseInt(moment(person.date).format("D")) &&
+      presentDate.getMonth() === parseInt(moment(person.date).format("M")) - 1
+    );
+  });
+  setAmount(filteredData.length);
+  const birthday = today === true ? filteredData : people;
+  console.log(filteredData);
   return (
     <>
-      {filteredData.map((person) => {
+      {birthday.map((person) => {
         const { id, name, age, date, image } = person;
         return (
           <article key={id} className="person">

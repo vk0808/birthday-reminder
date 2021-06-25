@@ -2,11 +2,14 @@ import React from "react";
 import moment from "moment";
 import Birthday from "./Birthday";
 import { FaEdit, FaTrash } from "react-icons/fa";
+import { data } from "./data";
 
-const List = ({ people, removePerson, editPerson }) => {
+const List = ({ people, removePerson, editPerson, today }) => {
+  let filteredData = people
+  today === true ? filteredData = data : filteredData = people 
   return (
     <>
-      {people.map((person) => {
+      {filteredData.map((person) => {
         const { id, name, age, date, image } = person;
         return (
           <article key={id} className="person">

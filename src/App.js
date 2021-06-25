@@ -24,6 +24,7 @@ export default function App() {
     age: "",
     date: null
   });
+  const [today, setToday] = useState(false);
   const [amount, setAmount] = useState(0);
   const [people, setPeople] = useState(getLocalStorage());
   const [isEditing, setIsEditing] = useState(false);
@@ -164,17 +165,18 @@ export default function App() {
                 {people.length} {people.length > 1 ? "birthdays" : "birthday"}{" "}
                 in the list
               </h3>
-              <div>
+              <button onClick={() => setToday(!today)}>
                 <FaCalendar size="20" />
                 <div className="today-count">
                   <p className="total-count">{amount}</p>
                 </div>
-              </div>
+              </button>
             </div>
             <List
               people={people}
               removePerson={removePerson}
               editPerson={editPerson}
+              today={today}
             />
             <button className="clear-btn" onClick={clearList}>
               clear all

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import moment from "moment";
+import { FaCalendar } from "react-icons/fa";
 import "moment-precise-range-plugin";
 import List from "./List";
 import Alert from "./Alert";
@@ -23,6 +24,7 @@ export default function App() {
     age: "",
     date: null
   });
+  const [amount, setAmount] = useState(0);
   const [people, setPeople] = useState(getLocalStorage());
   const [isEditing, setIsEditing] = useState(false);
   const [editId, setEditId] = useState(null);
@@ -157,10 +159,18 @@ export default function App() {
         </form>
         {people.length > 0 && (
           <div>
-            <h3>
-              {people.length} {people.length > 1 ? "birthdays" : "birthday"} in
-              the list
-            </h3>
+            <div className="title-section">
+              <h3>
+                {people.length} {people.length > 1 ? "birthdays" : "birthday"}{" "}
+                in the list
+              </h3>
+              <div>
+                <FaCalendar size="20" />
+                <div className="today-count">
+                  <p className="total-count">{amount}</p>
+                </div>
+              </div>
+            </div>
             <List
               people={people}
               removePerson={removePerson}

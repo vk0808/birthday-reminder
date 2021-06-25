@@ -160,7 +160,30 @@ main {
 .container h3 {
   font-weight: normal;
   text-transform: none;
+  margin-bottom: 0;
+}
+.title-section {
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.today-count {
+  position: absolute;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(10px, -30px);
+}
+.total-count {
+  color: var(--clr-black);
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 600;
 }
 .person {
   display: flex;

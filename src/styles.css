@@ -166,7 +166,8 @@ main {
   display: flex;
   flex-direction: row;
   column-gap: 1rem;
-  padding: 1rem 0;
+  padding: 1rem;
+  background: aliceblue;
   margin-bottom: 1.5rem;
   align-items: center;
   box-shadow: 5px 5px 5px var(--clr-grey-1);

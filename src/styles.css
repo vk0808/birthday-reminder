@@ -168,6 +168,14 @@ main {
   justify-content: space-between;
   align-items: center;
 }
+.title-section button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.title-section button:hover svg {
+  fill: var(--clr-grey-5);
+}
 .today-count {
   position: absolute;
   width: 1.25rem;
@@ -178,6 +186,9 @@ main {
   align-items: center;
   justify-content: center;
   transform: translate(10px, -30px);
+}
+.title-section .today-true .today-count {
+  background: var(--clr-primary-4);
 }
 .total-count {
   color: var(--clr-black);

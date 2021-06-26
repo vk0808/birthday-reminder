@@ -35,10 +35,12 @@ const List = ({ people, removePerson, editPerson, today, setAmount }) => {
             </div>
             <div className="btns">
               <button className="btn" onClick={() => editPerson(id)}>
-                <FaEdit size='20' />
+                <a href="#edit">
+                  <FaEdit size="20" />
+                </a>
               </button>
               <button className="btn">
-                <FaTrash size='20' onClick={() => removePerson(id)} />
+                <FaTrash size="20" onClick={() => removePerson(id)} />
               </button>
             </div>
           </article>

@@ -117,7 +117,7 @@ export default function App() {
 
   return (
     <main>
-      <section className="container">
+      <section id="edit" className="container">
         <h3 className="title">birthday reminder</h3>
         {alert.show && (
           <Alert {...alert} removeAlert={showAlert} people={people} />
@@ -165,7 +165,10 @@ export default function App() {
                 {people.length} {people.length > 1 ? "birthdays" : "birthday"}{" "}
                 in the list
               </h3>
-              <button className={`today-${today}`} onClick={() => setToday(!today)}>
+              <button
+                className={`today-${today}`}
+                onClick={() => setToday(!today)}
+              >
                 <FaCalendar size="20" />
                 <div className="today-count">
                   <p className="total-count">{amount}</p>

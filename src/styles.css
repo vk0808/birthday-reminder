@@ -218,7 +218,8 @@ main {
 }
 .person img {
   width: 75px;
-  height: 75px;
+  /* height: 75px; */
+  aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: var(--light-shadow);

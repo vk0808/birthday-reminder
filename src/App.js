@@ -41,7 +41,7 @@ export default function App() {
       info.age = calculate_age(info.date);
     }
     if (!info.name || !info.image || !info.age) {
-      showAlert(true, "danger", "please enter value");
+      showAlert(true, "danger", "please enter details");
     } else if (info.name && info.image && info.date && isEditing) {
       setPeople(
         people.map((person) => {

@@ -250,12 +250,13 @@ main {
   letter-spacing: var(--spacing);
   border-radius: var(--radius);
   cursor: pointer;
-  transition: ease-out 0.1s;
+  transition: all ease-in-out 0.1s;
   box-shadow: inset 0 0 0 0 var(--clr-pink);
 }
 .container .clear-btn:hover,
 .container .add-btn:hover {
   box-shadow: inset 386px 0 0 0 var(--clr-primary-4);
+  border: 2px solid var(--clr-primary-4);
 }
 .container .btn {
   margin-right: 1rem;
@@ -348,6 +349,11 @@ main {
 }
 .wish .name {
   text-transform: capitalize;
+}
+.no-birthday-today {
+  color: var(--clr-grey-3);
+  font-size: 1rem;
+  font-style: italic;
 }
 @media screen and (max-width: 576px) {
   .countdown-wrapper {

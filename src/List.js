@@ -23,7 +23,13 @@ const List = ({ people, removePerson, editPerson, today, setAmount }) => {
           const { id, name, age, date, image } = person;
           return (
             <article key={id} className="person">
-              <img src={image} alt={name} />
+              <img
+                src={image}
+                alt={name}
+                onError={(e) =>
+                  (e.target.src = `https://avatars.dicebear.com/api/initials/${name}.svg`)
+                }
+              />
               <div className="pesron-info">
                 <h4>{name}</h4>
                 <p>{moment(date).format("MMM Do YYYY")}</p>
